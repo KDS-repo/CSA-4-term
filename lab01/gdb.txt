@@ -1,9 +1,9 @@
-1.
-2.
-3.
-4.
-5.
-6.
-7.
-8.
-9.
+1.Through 'run' 'set args' or empty space, to pass arguments that were used previously
+2.'break ' empty space - set on current stack, linespec - file:func:label_or_line, address *func+5
+3.step
+4.trace
+5.continue
+6.explore value, print
+7.'display' and variable name
+8.info locals
+9.q
