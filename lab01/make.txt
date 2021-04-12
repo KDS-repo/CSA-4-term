@@ -1,7 +1,7 @@
-1.
-2.
-3.
-4.
-5.
-6.
-7.
+1. clean
+2. all, $(BIT_OPS_PROG), $(LFSR_PROG)
+3. g++
+4. C18 C98?
+5. $(foo), ${foo}
+6. It specifies parameters "-g -Wall" for command "g++" in $(CC). They are separated to allow "-c" in ".cpp.o:"
+7. 21
