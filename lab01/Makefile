@@ -29,6 +29,22 @@ test_bit_ops.cpp: bit_ops.h
 .cpp.o:
 	$(CC) -c $(CFLAGS) $<
 
+launch:
+	./$(BIT_OPS_PROG) ./$(LFSR_PROG)
+1:
+	./speciality
+2:
+	cat gdb.txt
+4:
+	./no_segfault_ex | ./segfault_ex
+5:
+	./test_ll_cycle
+6:
+	cat make.txt
+7:
+	./$(BIT_OPS_PROG)
+8:
+	./$(LFSR_PROG)
 
 clean:
 	-rm -rf core *.o *~ "#"*"#" Makefile.bak $(BINARIES) *.dSYM
