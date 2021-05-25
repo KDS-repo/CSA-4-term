@@ -221,7 +221,15 @@ TEST_SUITE("Decoder"){
             CHECK(instruction->_type == IType::Jr);
         }
     }
-
+		
+	TEST_CASE("PERSONAL")
+	{
+		SUBCASE("TASK")
+		{
+			auto instruction = _decoder.Decode(ADDI);
+			testI(instruction);
+		}
+	}
     /* YOUR CODE HERE */
 }
 
