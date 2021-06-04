@@ -221,13 +221,17 @@ TEST_SUITE("Decoder"){
             CHECK(instruction->_type == IType::Jr);
         }
     }
-		
+	
 	TEST_CASE("PERSONAL")
 	{
 		SUBCASE("TASK")
 		{
-			auto instruction = _decoder.Decode(ADDI);
-			testI(instruction);
+			//imm = 56, rs1 = 8
+			auto instruction = _decoder.Decode(0b000000111000'01000'000'01111'0010011);
+            CHECK(instruction->_aluFunc == AluFunc::Add);
+		    CHECK(instruction->_src1.value() == 8);
+		    CHECK(instruction->_dst.value() == 15);
+		    CHECK(instruction->_type == IType::Alu);
 		}
 	}
     /* YOUR CODE HERE */

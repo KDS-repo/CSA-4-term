@@ -236,6 +236,16 @@ TEST_SUITE("Executor"){
 
         }
     }
+
+    TEST_CASE("PERSONAL"){
+        SUBCASE("My ADDI"){
+			auto instruction = _decoder.Decode(0b000000111000'01000'000'01111'0010011);
+		    instruction->_src1Val = 8;
+            _exe.Execute(instruction, IP);
+		    CHECK_EQ(instruction->_nextIp, IP + 4);
+            CHECK_EQ(instruction->_data, 8 + 56);
+        }
+    }
     /* YOUR CODE HERE */
 }
 
